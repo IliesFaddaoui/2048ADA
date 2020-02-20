@@ -1,0 +1,27 @@
+WITH Ada.Integer_Text_IO , Ada.Text_IO ;
+use Ada.Integer_Text_IO , Ada.Text_IO ;
+
+PROCEDURE Affichage IS
+
+BEGIN
+   FOR I IN 1..9 LOOP
+      FOR J IN 1..9 LOOP
+         IF I mod 2=0 THEN
+            IF J mod 2=0 THEN
+               Put(" 4");
+            ELSE Put("|");
+            END IF;
+         ELSE
+            IF J mod 2=0 THEN
+               Put (" _ ");
+            ELSE
+               Put("+");
+            END IF;
+         END IF;
+      END LOOP;
+      new_line;
+   END LOOP;
+
+
+END Affichage;
+
